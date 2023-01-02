@@ -21,7 +21,7 @@ for table in tables:
     
     query = select_stmt + " WHERE "
     for field in fields:
-        query += field[0] + " LIKE '"+keyword+"' OR "
+        query += field[0] + " LIKE '%"+keyword+"%' OR "
     query = query[:-4]
 
     cursor.execute(query)
